@@ -4,3 +4,5 @@
   connection: local
   roles:
     - core
+    - { role: slack, become: yes }
+    - { role: spotify, become: yes }

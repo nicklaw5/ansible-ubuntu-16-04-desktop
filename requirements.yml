@@ -1,3 +1,6 @@
 ---
 - name: golang
   src: joshualund.golang
+
+- name: slack
+  src: wtanaka.slack

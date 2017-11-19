@@ -1,11 +1,21 @@
 ---
 - name: Update and upgrade apt packages
   become: yes
-  apt: update_cache=yes cache_valid_time=600 upgrade=dist
+  apt:
+    update_cache: yes
+    cache_valid_time: 600
+    upgrade: dist
 
 - name: Install System Packages
   become: yes
-  apt: pkg={{ item }} state=present
+  apt:
+    pkg: "{{ item }}"
+    state: present
   with_items:
     - htop
     - ufw
+
+- name: Copy Git config
+  copy:
+    src: .gitconfig
+    dest: "{{ ansible_env.HOME}}/.gitconfig"

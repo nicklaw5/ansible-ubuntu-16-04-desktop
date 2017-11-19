@@ -1,0 +1,9 @@
+[user]
+        email = nick@nicholaslaw.com.au
+        name = Nick Law
+[push]
+        default = simple
+[alias]
+        st = status
+[rebase]
+        autosquash = true

@@ -3,3 +3,4 @@ playbook.retry
 
 # Ansible Galaxy Roles
 roles/golang
+roles/slack
